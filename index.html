@@ -5,7 +5,7 @@
     <meta property="og:image" content="https://images.pexels.com/photos/8637983/pexels-photo-8637983.jpeg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Cellular Support | Natural Mitochondrial Formula</title>
+    <title>Advanced Mitochondrial Support | Revitalize Your Cellular Energy</title>
     <style>
         :root {
             --primary: #2c3e50;
@@ -32,69 +32,119 @@
         }
         header {
             text-align: center;
-            padding: 30px 0;
+            padding: 40px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 30px;
         }
         h1 {
-            font-size: 2.3rem;
-            color: var(--primary);
+            font-size: 2.5rem;
             margin-bottom: 15px;
             line-height: 1.2;
         }
-        .product-showcase {
+        .subtitle {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        .section-divider {
             text-align: center;
             margin: 30px 0;
             position: relative;
         }
-        .product-image {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+        .section-divider:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #eee;
+            z-index: 1;
         }
-        .product-image:hover {
-            transform: scale(1.02);
+        .divider-text {
+            display: inline-block;
+            background: white;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            font-weight: bold;
+            color: var(--primary);
         }
-        .image-credit {
-            display: block;
-            font-size: 0.7rem;
-            color: #95a5a6;
-            margin-top: 8px;
+        .product-section {
+            text-align: center;
+            padding: 30px 0;
+        }
+        .product-title {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .product-description {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+        .science-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 8px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-bottom: 30px;
         }
         .benefits-section {
             background: white;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 30px 0;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .benefits-title {
+            text-align: center;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 30px;
         }
         .benefits-list {
-            margin: 25px 0;
-            padding-left: 25px;
+            list-style-type: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
         }
         .benefits-list li {
-            margin-bottom: 15px;
-            font-size: 1.05rem;
+            margin-bottom: 20px;
+            padding-left: 35px;
             position: relative;
-            padding-left: 10px;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
         .benefits-list li:before {
-            content: "✓";
+            content: "•";
             color: var(--accent);
             font-weight: bold;
+            font-size: 1.8rem;
             position: absolute;
-            left: -20px;
+            left: 0;
+            top: -5px;
         }
         .cta-container {
             text-align: center;
-            padding: 40px 0;
-            margin: 40px 0;
-            background: linear-gradient(to bottom right, #f0f7ff, #e6f7ff);
-            border-radius: 12px;
-            border: 1px solid #e1f0ff;
+            padding: 50px 0;
+            margin: 50px 0;
+            background: linear-gradient(to bottom right, #f0f9ff, #e6f7ff);
+            border-radius: 15px;
         }
-        .btn {
+        .cta-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .cta-button {
             display: inline-block;
             background: var(--accent);
             color: white;
@@ -107,7 +157,7 @@
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
         }
-        .btn:hover {
+        .cta-button:hover {
             background: #219653;
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(39, 174, 96, 0.4);
@@ -131,12 +181,18 @@
 
         @media (max-width: 768px) {
             h1 {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            .product-title {
                 font-size: 1.8rem;
             }
             .benefits-section {
-                padding: 20px;
+                padding: 30px 20px;
             }
-            .btn {
+            .cta-button {
                 padding: 16px 40px;
                 font-size: 1.1rem;
             }
@@ -144,10 +200,16 @@
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
             }
             .container {
                 padding: 15px;
+            }
+            .benefits-title {
+                font-size: 1.5rem;
+            }
+            .cta-title {
+                font-size: 1.6rem;
             }
         }
     </style>
@@ -156,34 +218,38 @@
     <div class="container">
         <header>
             <h1>Revitalize Your Cellular Energy Naturally</h1>
-            <p>Discover a Science-Backed Approach to Mitochondrial Support</p>
+            <p class="subtitle">Discover a Science-Backed Approach to Mitochondrial Support</p>
         </header>
 
-        <div class="product-showcase">
-            <img src="https://images.pexels.com/photos/8637983/pexels-photo-8637983.jpeg" alt="Natural supplement for mitochondrial support" class="product-image">
-            <span class="image-credit">Photo by Karolina Grabowska from Pexels</span>
+        <div class="section-divider">
+            <span class="divider-text">Advanced Mitochondrial Support</span>
         </div>
 
+        <section class="product-section">
+            <p class="product-description">A breakthrough formula combining 6 clinically-studied botanicals to support cellular energy production and vitality.</p>
+            <div class="science-badge">Scientifically Developed</div>
+        </section>
+
         <section class="benefits-section">
-            <h2>Why This Advanced Formula Stands Out:</h2>
+            <h2 class="benefits-title">Why This Formula Stands Out:</h2>
             <ul class="benefits-list">
-                <li>Contains 6 clinically-researched botanical ingredients known to support cellular energy production</li>
-                <li>Specifically formulated to enhance mitochondrial function at the cellular level</li>
-                <li>Promotes natural energy pathways without artificial stimulants</li>
-                <li>Non-GMO and manufactured in FDA-registered facilities following strict quality protocols</li>
-                <li>Third-party tested for purity and potency assurance</li>
+                <li>6 clinically-researched botanical ingredients</li>
+                <li>Supports mitochondrial function at the cellular level</li>
+                <li>Promotes natural energy production</li>
+                <li>Non-GMO and manufactured in FDA-registered facilities</li>
+                <li>Third-party tested for purity and potency</li>
+                <li>60-day satisfaction guarantee</li>
             </ul>
         </section>
 
         <section class="cta-container">
-            <h2>Ready to Experience Enhanced Cellular Vitality?</h2>
-            <p>Join thousands who have discovered the difference with this advanced formula</p>
-            <a href="https://mitolyn.com/science/?affiliate=santaninha" class="btn">LEARN MORE ABOUT THIS FORMULA</a>
+            <h2 class="cta-title">Ready to Transform Your Cellular Health?</h2>
+            <a href="https://mitolyn.com/science/?affiliate=santaninha" class="cta-button">LEARN MORE ABOUT THIS FORMULA</a>
             <p class="guarantee">60-Day Money Back Guarantee | Free Shipping Available</p>
         </section>
 
         <div class="disclaimer">
-            *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary based on individual factors. As an independent affiliate, I earn commissions from purchases made through my link. The information provided is for educational purposes only and is not medical advice. Consult your healthcare provider before starting any new dietary supplement, especially if you have pre-existing medical conditions or are taking medications.
+            *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary based on individual factors. As an independent affiliate, I earn commissions from purchases made through my link. The information provided is for educational purposes only and is not medical advice. Consult your healthcare provider before starting any new dietary supplement.
         </div>
     </div>
 </body>
